@@ -22,7 +22,7 @@ const serialPort = new SerialPort({
   flowControl: false,
 });
 
-const parser = new ReadlineParser('\n\r');
+const parser = new ReadlineParser("\n\r");
 serialPort.pipe(parser);
 
 parser.on("data", function (data) {
